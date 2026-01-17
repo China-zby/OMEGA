@@ -26,14 +26,16 @@ Download and extract the datasets following the URLs above before running experi
 
 ### Setup Environment
 
-```bash
+
 # Create and activate conda environment
+```bash
 conda create -n omega python=3.8
 conda activate omega
-
+```
 # Navigate to project directory
+```bash
 cd /path/to/omega/
-
+```
 # Install dependencies
 pip install -r requirements.txt
 
