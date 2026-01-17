@@ -37,8 +37,9 @@ conda activate omega
 cd /path/to/omega/
 ```
 # Install dependencies
+```bash
 pip install -r requirements.txt
-
+```
 ## Run Experiments
 
 Our method follows a two-stage pipeline: **Offline Training** and **Online Query**.
@@ -53,16 +54,16 @@ Train the reinforcement learning model using the provided script.
 
 ```bash
 bash train.sh
-
+```
 Custom Training
 You can also run the training script directly with custom parameters:
-
+```bash
 python mix_reinforce_dpn_new.py \
     --input_epoch <epoch_number> \
     --query_path '<path_to_query_datasets>' \
     --video_path '<path_to_video>' \
     --cache_path '<path_to_cache>'
-
+```
 #### Training Parameters
 
 - `--input_epoch`: Training iteration index (Example: `0`, `1`, ..., `9`)
@@ -86,13 +87,15 @@ After training, run the query process using the trained model:
 
 ```bash
 python ./fast-reid/demo/baseline.py
-
+```
 Query Parameters
 --test_baseline (bool, default: true): Set true for baseline method; false to enable RL-enhanced query
 Example Commands
 Run with RL-enhanced method (our approach):
-
+```bash
 python ./fast-reid/demo/baseline.py --test_baseline false
+```
 Run baseline comparison:
-
+```bash
 python ./fast-reid/demo/baseline.py --test_baseline true
+```
